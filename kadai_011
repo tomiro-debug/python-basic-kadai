@@ -1,0 +1,43 @@
+# **課題：繰り返し処理を使いこなそう**
+
+# リストの中身を先頭から全て取り出して、出力結果が以下のようになるプログラムを、for、while、それぞれを利用して記述して下さい。
+
+list = ["水","金","地","火","木","土","天","海","冥"]
+
+# 出力結果
+水
+金
+地
+火
+木
+土
+天
+海
+冥
+水
+金
+地
+火
+木
+土
+天
+海
+冥
+
+# forの場合
+
+planet_list = ["水", "金", "地", "火", "木", "土", "天", "海", "冥"] # planet_listというリストを作成
+
+for _ in range(2):  # リストの中身を2回繰り返す。_←は使っていない変数なのでただ2回ループをする。
+    for planet in planet_list: #planet_listから要素を取り出し、planetという変数に格納
+        print(planet)
+
+# whileの場合
+
+planet_list = ["水", "金", "地", "火", "木", "土", "天", "海", "冥"]
+
+count = 0 #countを0に設定
+while count < 2:  # リストの中身を2回まで繰り返す
+    for planet in planet_list: #planet_listから要素を取り出し、planetという変数に格納
+        print(planet)
+    count += 1 #countを1回プラス
