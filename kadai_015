@@ -1,0 +1,19 @@
+# **課題：クラスを使いこなそう**
+
+# 名前(name)と年齢(age)の属性を持つHumanクラスを作成してください。
+# nameとageを標準出力(print)するメソッド(printinfo)を追加してください。
+
+# Humanクラスのインスタンスは、変数に代入してプログラム内で使用してください。
+
+class Human: # クラスの定義をする
+    def __init__(self, name, age): # コンストラクタを定義し、初期化する。
+        self.name = name
+        self.age = age
+
+    def printinfo(self): # メソッドの定義をする。
+        print(self.name)
+        print(self.age)
+
+person = Human("yamada", 30) # インスタンス化をする
+
+person.printinfo() # メソッドにアクセスし、出力する
