@@ -1,0 +1,26 @@
+# 課題：変数スコープを正しく使おう
+
+以下のコードを実行するとスコープに関するエラーが発生します。エラーを修正して、正しく計算結果が出力されるようにしてください。
+
+price1 = 100
+
+price2 = 200
+
+def total():
+    
+    tax = 1.1
+
+    return price1 + price2
+
+print (total() * tax)
+
+# エラー修正後
+
+def total(price1, price2): # ローカル変数を定義する。
+    tax = 1.1
+    return (price1 + price2) # ここまでがローカル変数。
+
+price1 = 100 # グローバル変数を定義する。
+price2 = 200
+
+print(total(price1, price2)) # グローバルスコープの範囲内でグローバル変数を使う
