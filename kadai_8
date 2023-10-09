@@ -1,0 +1,42 @@
+# **課題：条件分岐のif文で処理を切り替えよう**
+
+# 変数varが3の倍数の場合はFizz、5の倍数の場合はBuzz、3と5の倍数の場合はFizzBuzz、それ以外の場合は変数varを出力する条件式を記述してください。
+# ただし、変数varは正の整数とします。
+
+import random
+
+# 0から90までの乱数varを発生
+var = random.randint(0,90)
+
+var = 15    # 強制的にvarに15を設定
+
+# var = 5    # 強制的にvarに5を設定
+
+# var = 3    # 強制的にvarに3を設定
+
+# var = 2    # 強制的にvarに2(それ以外)を設定
+
+if var % 3 == 0 and var % 5 == 0:         # varが3と5の倍数の時
+    print("FizzBuzz")
+elif var % 5 == 0:       # varが5の倍数の時
+    print("Buzz")
+elif var % 3 == 0:      # varが3の倍数の時
+    print("Fizz")
+else:                    # それ以外
+    print(int(var))
+
+# テストについて
+# この処理をcheck_FizzBuzz(n)という関数で書いて、n=3の倍数、5の倍数、3かつ5の倍数、それ以外で試験した状態を作成しました。
+
+def check_FizzBuzz(n):  # 関数を作成
+
+    if n % 3 == 0 and n % 5 == 0:  # 3かつ5の倍数である時
+        print("FizzBuzz")
+    elif n % 5 == 0:  # varが5の倍数の時
+        print("Buzz")
+    elif n % 3 == 0:  # varが3の倍数の時
+        print("Fizz")
+    else:
+      print(int(n))
+
+check_FizzBuzz(15)   # 関数を呼び出すnの数字は任意で設定
