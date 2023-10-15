@@ -24,20 +24,22 @@ list = ["水","金","地","火","木","土","天","海","冥"]
 海
 冥
 
-# forの場合
+#forの場合
 
-planet_list = ["水", "金", "地", "火", "木", "土", "天", "海", "冥"] # planet_listというリストを作成
+# planet_listというリストを作成
+planet_list = ["水", "金", "地", "火", "木", "土", "天", "海", "冥"]
 
-for _ in range(2):  # リストの中身を2回繰り返す。_←は使っていない変数なのでただ2回ループをする。
-    for planet in planet_list: #planet_listから要素を取り出し、planetという変数に格納
+for i in range(1):  # リストの中身を1回繰り返す。
+    for planet in planet_list: #リストから要素を取り出し、変数に格納
         print(planet)
 
 # whileの場合
 
+# planet_listというリストを作成
 planet_list = ["水", "金", "地", "火", "木", "土", "天", "海", "冥"]
 index = 0
 
-while index < len(my_list):
-    print(my_list[index])
+while index < len(planet_list):
+    print(planet_list[index])
     index += 1
     count += 1 #countを1回プラス
