@@ -35,9 +35,9 @@ for _ in range(2):  # リストの中身を2回繰り返す。_←は使って�
 # whileの場合
 
 planet_list = ["水", "金", "地", "火", "木", "土", "天", "海", "冥"]
+index = 0
 
-count = 0 #countを0に設定
-while count < 2:  # リストの中身を2回まで繰り返す
-    for planet in planet_list: #planet_listから要素を取り出し、planetという変数に格納
-        print(planet)
+while index < len(my_list):
+    print(my_list[index])
+    index += 1
     count += 1 #countを1回プラス
