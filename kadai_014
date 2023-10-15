@@ -15,12 +15,14 @@
 # print (total() * tax)
 
 # エラー修正後
-
-def total(price1, price2): # ローカル変数を定義する。
-    tax = 1.1
-    return (price1 + price2) # ここまでがローカル変数。
-
 price1 = 100 # グローバル変数を定義する。
 price2 = 200
+tax = 1.1
 
-print(total(price1, price2)) # グローバルスコープの範囲内でグローバル変数を使う
+def total(): 
+    # ローカル変数を定義する。
+    return price1 + price2
+    # ここまでがローカルスコープの範囲内
+
+# グローバルスコープの範囲内でグローバルスコープを使う
+print(total() * tax)
